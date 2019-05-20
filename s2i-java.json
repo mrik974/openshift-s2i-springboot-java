@@ -1,0 +1,33 @@
+{
+    "kind": "ImageStreamList",
+    "apiVersion": "v1",
+    "metadata": {},
+    "items": [
+        {
+            "kind": "ImageStream",
+            "apiVersion": "v1",
+            "metadata": {
+                "name": "springboot-java8",
+                "creationTimestamp": null
+            },
+            "spec": {
+                "tags": [
+                    {
+                        "name": "1.8.0",
+                        "annotations": {
+                            "description": "Build and run Java 8 Spring based applications using Maven or Gradle. By default Maven is used. If you want to use Gradle, please set your build env var 'BUILD_TYPE' to 'Gradle'",
+                            "iconClass": "icon-java",
+                            "tags": "builder,java,java-8",
+                            "supports": "java:8,java",
+                            "version": "1.8.0"
+                        },
+                        "from": {
+                            "kind": "ImageStreamTag",
+                            "name": "springboot-java:latest"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
